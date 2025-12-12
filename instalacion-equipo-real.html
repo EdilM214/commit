@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Instalación En Equipo Real</title>
+        <link rel="stylesheet" href="STYLE.CSS" />
+        <style>
+            .sistemas-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 18px;
+                align-items: start;
+                justify-items: center;
+                margin-top: 14px;
+            }
+            .sistema-card {
+                background: #fff;
+                border-radius: 10px;
+                padding: 16px 12px;
+                width: 100%;
+                max-width: 260px;
+                box-shadow: 0 6px 18px rgba(20,30,60,0.06);
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .sistema-card img { width:64px; height:64px; object-fit:contain; margin:0 auto; }
+            .sistema-nombre { font-weight:700; color:#1e1e2f; font-size:15px; }
+            .sistema-desc { font-size:13px; color:#666; }
+        </style>
+    </head>
+<body>
+    <nav class="navbar">
+        <h2 class="logo">MiWeb</h2>
+        <ul>
+            <li><a href="INDEX.HTML">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Instalación En Equipo Real</h1>
+    </header>
+
+    <section class="contenido">
+        <div class="documento" style="max-width:1050px; margin:30px auto; padding:40px; background:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+            <div style="display:flex; justify-content:flex-end; margin-bottom:18px;">
+                <a href="INDEX.HTML" style="text-decoration:none; color:#4f6ef7; font-weight:600;">Volver al Inicio</a>
+            </div>
+
+            <h2 style="color:#1e1e2f; border-bottom:3px solid #4f6ef7; padding-bottom:10px; margin-top:0;">Instalación en Equipo Real</h2>
+            <h3 style="color:#4f6ef7; margin-top:18px; text-align:center;">Sistemas / Preparación</h3>
+            <div class="sistemas-grid">
+                <a class="sistema-card" href="instalacion-xp.html" target="_blank" title="Abrir página de Windows XP">
+                    <img src="imagenes/XP.jpeg" alt="Windows XP logo" class="sistema-icon" style="width:80px;height:80px;object-fit:contain;margin:0 auto;">
+                    <div class="sistema-nombre">Windows XP</div>
+                    <div class="sistema-desc">Legacy - instaladores y particionado clásico</div>
+                </a>
+
+                <a class="sistema-card" href="instalacion-w7.html" target="_blank" title="Abrir página de Windows 7">
+                    <img src="imagenes/WIN 7.jpg" alt="Windows 7 logo" class="sistema-icon" style="width:80px;height:80px;object-fit:contain;margin:0 auto;">
+                    <div class="sistema-nombre">Windows 7</div>
+                    <div class="sistema-desc">Soporte y drivers legacy</div>
+                </a>
+
+                <a class="sistema-card" href="instalacion-w8.html" target="_blank" title="Abrir página de Windows 8">
+                    <img src="imagenes/windows-8.jpg" alt="Windows 8 logo" class="sistema-icon" style="width:80px;height:80px;object-fit:contain;margin:0 auto;">
+                    <div class="sistema-nombre">Windows 8</div>
+                    <div class="sistema-desc">Requisitos UEFI posibles</div>
+                </a>
+
+                <a class="sistema-card" href="instalacion-w10.html" target="_blank" title="Abrir página de Windows 10">
+                    <img src="imagenes/WIN 10.jpg" alt="Windows 10 logo" class="sistema-icon" style="width:80px;height:80px;object-fit:contain;margin:0 auto;">
+                    <div class="sistema-nombre">Windows 10</div>
+                    <div class="sistema-desc">Recomendado: UEFI, 64-bit</div>
+                </a>
+
+                <a class="sistema-card" href="instalacion-w11.html" target="_blank" title="Abrir página de Windows 11">
+                    <img src="imagenes/WIN 11.png" alt="Windows 11 logo" class="sistema-icon" style="width:80px;height:80px;object-fit:contain;margin:0 auto;">
+                    <div class="sistema-nombre">Windows 11</div>
+                    <div class="sistema-desc">TPM 2.0 y Secure Boot (verificar firmware)</div>
+                </a>
+
+                <a class="sistema-card" href="instalacion-ubuntu.html" target="_blank" title="Abrir página de Ubuntu">
+                        <svg class="sistema-icon" width="80" height="80" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="32" cy="32" r="26" fill="#E95420" />
+                            <circle cx="44" cy="22" r="3.5" fill="#FFFFFF" />
+                            <circle cx="20" cy="22" r="3.5" fill="#FFFFFF" />
+                            <circle cx="32" cy="14" r="3.5" fill="#FFFFFF" />
+                        </svg>
+                    <div class="sistema-nombre">Ubuntu</div>
+                    <div class="sistema-desc">LTS recomendado, particionado ext4</div>
+                </a>
+
+                <a class="sistema-card" href="preparacion-ventoy.html" target="_blank" title="Abrir página de Preparación de Ventoy">
+                        <svg class="sistema-icon" width="80" height="80" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="18" y="12" width="28" height="32" rx="4" fill="#333" />
+                            <rect x="26" y="8" width="12" height="6" rx="2" fill="#333" />
+                            <rect x="30" y="40" width="4" height="8" rx="1" fill="#555" />
+                            <path d="M22 20 L42 20" stroke="#FFF" stroke-width="2" stroke-linecap="round" />
+                            <path d="M22 26 L42 26" stroke="#FFF" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    <div class="sistema-nombre">Preparación De Ventoy</div>
+                    <div class="sistema-desc">Crear USB multiboot con Ventoy</div>
+                </a>
+            </div>
+
+            <!-- Detalles (ocultos) para modal -->
+            <div id="detalles-contenedor" style="display:none;">
+                <div id="xp-detail" class="detalle">
+                    <h4>Windows XP - Notas de instalación</h4>
+                    <ul>
+                        <li>Interfaz de instalación clásica (texto azul).</li>
+                        <li>Particionar con C/D, formatear NTFS.</li>
+                        <li>Asegurarse de drivers legacy para chipset y video.</li>
+                    </ul>
+                </div>
+                <div id="w7-detail" class="detalle">
+                    <h4>Windows 7 - Notas de instalación</h4>
+                    <ul>
+                        <li>Preferible instalación en modo legacy si el hardware no soporta UEFI.</li>
+                        <li>Instalar Service Pack y drivers desde el fabricante.</li>
+                    </ul>
+                </div>
+                <div id="w8-detail" class="detalle">
+                    <h4>Windows 8 - Notas de instalación</h4>
+                    <ul>
+                        <li>Verificar soporte NX, PAE y SSE2 si es en VM.</li>
+                        <li>UEFI puede ser requerido en hardware nuevo.</li>
+                    </ul>
+                </div>
+                <div id="w10-detail" class="detalle">
+                    <h4>Windows 10 - Notas de instalación</h4>
+                    <ul>
+                        <li>Recomendado usar imagen oficial y UEFI 64-bit.</li>
+                        <li>Asignar al menos 4 GB RAM para buen rendimiento.</li>
+                    </ul>
+                </div>
+                <div id="w11-detail" class="detalle">
+                    <h4>Windows 11 - Notas de instalación</h4>
+                    <ul>
+                        <li>Requiere TPM 2.0 y Secure Boot; comprobar firmware.</li>
+                        <li>Algunas placas requieren ajustes para habilitar TPM virtual o emulación.</li>
+                    </ul>
+                </div>
+                <div id="ubuntu-detail" class="detalle">
+                    <h4>Ubuntu - Notas de instalación</h4>
+                    <ul>
+                        <li>Se recomienda usar la versión LTS más reciente.</li>
+                        <li>Particionar ext4 y swap según uso.</li>
+                    </ul>
+                </div>
+                <div id="ventoy-detail" class="detalle">
+                    <h4>Preparación de Ventoy</h4>
+                    <ul>
+                        <li>Descargar Ventoy y ejecutar en modo administrador.</li>
+                        <li>Instalar Ventoy en la unidad USB y copiar ISOs directamente.</li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <!-- Modal de detalle -->
+    <div id="detalleModal" style="display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:2000;">
+        <div style="max-width:900px; margin:6% auto; background:#fff; border-radius:8px; padding:20px; box-shadow:0 12px 30px rgba(0,0,0,0.2); position:relative;">
+            <button id="closeDetalle" style="position:absolute; right:14px; top:12px; background:#eee; border:none; padding:8px 10px; border-radius:6px; cursor:pointer;">Cerrar</button>
+            <div id="detalleContenido"></div>
+        </div>
+    </div>
+
+    <script>
+        // Hacer tarjetas clicables y abrir modal con contenido
+        document.querySelectorAll('.sistema-card').forEach(function(card){
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(){
+                var target = this.getAttribute('data-target');
+                var detalle = document.getElementById(target);
+                if (detalle) {
+                    document.getElementById('detalleContenido').innerHTML = detalle.innerHTML;
+                    document.getElementById('detalleModal').style.display = 'block';
+                }
+            });
+        });
+        document.getElementById('closeDetalle').addEventListener('click', function(){ document.getElementById('detalleModal').style.display = 'none'; });
+        // Cerrar modal al hacer click fuera
+        window.addEventListener('click', function(e){ if (e.target.id === 'detalleModal') document.getElementById('detalleModal').style.display = 'none'; });
+    </script>
+</body>
+</html>
