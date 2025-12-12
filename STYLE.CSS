@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background: #1e1e2f;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: #fff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MENÚ DESPLEGABLE */
+.menu-item {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2a2a3e;
+    list-style: none;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    min-width: 220px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.menu-item:hover .submenu {
+    /* Removido para usar clic en lugar de hover */
+}
+
+.submenu.active {
+    display: flex !important;
+}
+
+.submenu li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #3a3a4e;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.submenu li a:hover {
+    color: #6ac1ff;
+}
+
+/* HERO */
+.hero {
+    height: 600px;
+    background-image: url('cool.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* CONTENIDO */
+.contenido {
+    padding: 40px;
+    text-align: center;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REPORTE III</title>
+    <link rel="stylesheet" href="STYLE.CSS" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2 class="logo">MiWeb</h2>
+        <ul>
+            <li class="menu-item dropdown">
+                <a href="#" class="dropdown-toggle">Inicio</a>
+                <ul class="submenu">
+                    <li><a href="informacion-software.html">Información De Software</a></li>
+                    <li><a href="tipos-sistema-operativo.html">Tipos De Sistema Operativo</a></li>
+                    <li><a href="sistemas operativos.html">Sistemas Operativos</a></li>
+                    <li><a href="instalacion-software.html">Instalación de Software Virtual / Real</a></li>
+                    <li><a href="instalacion-equipo-real.html">Instalación en Equipo Real</a></li>
+                    
+                    <li><a href="mesa-servicio.html">Mesa de Servicio</a></li>
+                </ul>
+            </li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>     
+    </nav>
+    <header class="hero">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 style="color:#141515"><strong><em>REPORTE III TRIMESTRE</em></strong></h1>
+        <p>Creada con HTML, CSS y un toque de JavaScript.</p>
+        <button id="btn" onclick="abrirKahoot()">Haz clic aquí</button>
+    </header>
+
+    <section class="contenido">
+        <h2>Contenido de la página</h2>
+        <p style="text-align:justify; max-width:900px; margin:20px auto;">Esta página reúne todas las actividades y trabajos que realizamos durante el tercer trimestre. Es un espacio donde se refleja nuestro esfuerzo, lo que fuimos aprendiendo y cómo fuimos creciendo a lo largo de este tiempo. La idea es mostrar de una manera sencilla y ordenada todo lo que hicimos, desde pequeñas tareas hasta proyectos más completos, para recordar nuestro progreso y compartirlo con quienes quieran conocerlo.</p>
+    </section>
+
+    <script src="SCRIPT.JS"></script>
+    <script>
+      // Google Tag Manager
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5HCKFC');
+      
+      // Amplitude Analytics
+      (function (e, t) {
+        var n = e.amplitude || { _q: [], _iq: {} };
+        var r = t.createElement('script');
+        r.type = 'text/javascript';
+        r.integrity = 'sha384-fUI/0bA1xDBf6EUz63EooFKnh6GRcNbA59KcJ/C91G5WByKS4ZwDLY8qENzezkJ/';
+        r.crossOrigin = 'anonymous';
+        r.async = true;
+        r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.9-min.gz.js';
+        r.onload = function () {
+          if (!e.amplitude.runQueuedFunctions) {
+            console.log('[Amplitude] Error: could not load SDK');
+          }
+        };
+        var i = t.getElementsByTagName('script')[0];
+        i.parentNode.insertBefore(r, i);
+        function s(e, t) {
+          e.prototype[t] = function () {
+            this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+            return this;
+          };
+        }
+        var o = function () {
+          this._q = [];
+          return this;
+        };
+        var a = ['add', 'append', 'clearAll', 'prepend', 'set', 'setOnce', 'unset'];
+        for (var u = 0; u < a.length; u++) {
+          s(o, a[u]);
+        }
+        n.Identify = o;
+        var c = function () {
+          this._q = [];
+          return this;
+        };
+        var l = ['setProductId', 'setQuantity', 'setPrice', 'setRevenueType', 'setEventProperties'];
+        for (var p = 0; p < l.length; p++) {
+          s(c, l[p]);
+        }
+        n.Revenue = c;
+        var d = [
+          'init',
+          'logEvent',
+          'logRevenue',
+          'setUserId',
+          'setUserProperties',
+          'setOptOut',
+          'setVersionName',
+          'setDomain',
+          'setDeviceId',
+          'setGlobalUserProperties',
+          'identify',
+          'clearUserProperties',
+          'setGroup',
+          'logRevenueV2',
+          'regenerateDeviceId',
+          'groupIdentify',
+          'onInit',
+          'logEventWithTimestamp',
+          'logEventWithGroups',
+          'setSessionId',
+          'resetSessionId',
+        ];
+        function v(e) {
+          function t(t) {
+            e[t] = function () {
+              e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          }
+          for (var n = 0; n < d.length; n++) {
+            t(d[n]);
+          }
+        }
+        v(n);
+        n.getInstance = function (e) {
+          e = (!e || e.length === 0 ? '$default_instance' : e).toLowerCase();
+          if (!n._iq.hasOwnProperty(e)) {
+            n._iq[e] = { _q: [] };
+            v(n._iq[e]);
+          }
+          return n._iq[e];
+        };
+        e.amplitude = n;
+      })(window, document);
+
+      function sendGameStats() {}
+
+      function abrirKahoot() {
+        window.open('https://create.kahoot.it/', '_blank');
+      }
+    </script>
+
+    <footer style="text-align:center; padding:30px 20px; background:#a7d1d2; margin-top:40px; border-top:1px solid #ddd;">
+        <p style="margin:0; color:#0e5871; font-size:14px;"><strong>Hecho Por: EDILBERTO MÁRQUEZ CAMACHO</strong></p>
+    </footer>
+</body>
+</html>

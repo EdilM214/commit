@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Imagen - Galería</title>
+    <link rel="stylesheet" href="STYLE.CSS" />
+    <style>
+        body { background:#f5f7fb; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#233043; }
+        .container { max-width:900px; margin:40px auto; background:#fff; padding:28px; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); }
+        h1 { color:#1e1e2f; margin-bottom:12px; }
+        label { display:block; margin-top:12px; font-weight:600; }
+        input[type="text"], textarea { width:100%; padding:10px 12px; border:1px solid #d7e1fb; border-radius:6px; margin-top:6px; }
+        .fila { display:flex; gap:12px; }
+        .preview { margin-top:18px; text-align:center; }
+        .preview img { max-width:100%; max-height:320px; border-radius:8px; box-shadow:0 6px 16px rgba(0,0,0,0.08); }
+        button { background:#4f6ef7; color:#fff; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; margin-top:12px; }
+        .output { margin-top:18px; }
+        .codebox { width:100%; height:160px; padding:12px; border-radius:6px; border:1px solid #e6eefc; background:#f8fbff; font-family:monospace; white-space:pre-wrap; overflow:auto; }
+        .nota { color:#666; font-size:13px; margin-top:10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Imagen a la Galería</h1>
+        <p class="nota">Rellena los datos y pulsa "Generar tarjeta". Copia el HTML generado y pégalo dentro del elemento <code>&lt;div class="galeria-grid"&gt;</code> en el archivo <code>imagenes.html</code>.</p>
+
+        <label for="imgUrl">URL de la imagen (ej. https://...)</label>
+        <input id="imgUrl" type="text" placeholder="https://.../imagen.png">
+
+        <label for="titulo">Título (ej. Windows 10)</label>
+        <input id="titulo" type="text" placeholder="Título de la imagen">
+
+        <label for="desc">Descripción corta</label>
+        <textarea id="desc" rows="3" placeholder="Descripción breve"></textarea>
+
+        <div class="preview" id="previewArea" style="display:none;">
+            <strong>Vista previa</strong>
+            <div style="margin-top:10px;"><img id="previewImg" src="" alt="Vista previa"></div>
+        </div>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+            <button id="generar">Generar tarjeta</button>
+            <button id="limpiar" style="background:#e0e7ff; color:#21315b;">Limpiar</button>
+        </div>
+
+        <div class="output">
+            <label>HTML generado (cópialo y pégalo en <code>imagenes.html</code> dentro de <code>&lt;div class="galeria-grid"&gt;</code>):</label>
+            <div id="code" class="codebox"></div>
+        </div>
+
+        <p class="nota">Sugerencia: después de pegar en <code>imagenes.html</code>, refresca la página con <kbd>Ctrl+F5</kbd> para forzar recarga completa.</p>
+    </div>
+
+    <script>
+        const imgUrl = document.getElementById('imgUrl');
+        const titulo = document.getElementById('titulo');
+        const desc = document.getElementById('desc');
+        const previewArea = document.getElementById('previewArea');
+        const previewImg = document.getElementById('previewImg');
+        const generar = document.getElementById('generar');
+        const limpiar = document.getElementById('limpiar');
+        const code = document.getElementById('code');
+
+        function actualizarPreview() {
+            const url = imgUrl.value.trim();
+            if (!url) { previewArea.style.display='none'; return; }
+            previewImg.src = url;
+            previewArea.style.display='block';
+        }
+
+        imgUrl.addEventListener('input', actualizarPreview);
+
+        generar.addEventListener('click', function(){
+            const u = imgUrl.value.trim();
+            const t = titulo.value.trim() || 'Imagen';
+            const d = desc.value.trim() || '';
+            if (!u) { alert('Ingresa la URL de la imagen.'); return; }
+
+            // Codificar comillas para no romper el HTML
+            const safeU = u.replace(/"/g, '&quot;');
+            const safeT = t.replace(/"/g, '&quot;');
+            const safeD = d.replace(/"/g, '&quot;');
+
+            const tarjeta = `            <!-- Nueva imagen -->\n            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">\n                <img src="${safeU}" alt="${safeT}">\n                <div class="galeria-item-info">\n                    <div class="galeria-item-titulo">${safeT}</div>\n                    <div class="galeria-item-desc">${safeD}</div>\n                </div>\n            </div>`;
+
+            code.textContent = tarjeta;
+            actualizarPreview();
+        });
+
+        limpiar.addEventListener('click', function(){
+            imgUrl.value=''; titulo.value=''; desc.value=''; code.textContent=''; previewArea.style.display='none';
+        });
+    </script>
+</body>
+</html>

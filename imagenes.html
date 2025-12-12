@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Imágenes</title>
+    <link rel="stylesheet" href="STYLE.CSS" />
+    <style>
+        body { background-color: #f5f5f5; }
+        .galeria-container { max-width: 1200px; margin: 40px auto; padding: 20px; }
+        .galeria-titulo { text-align: center; color: #1e1e2f; margin-bottom: 40px; font-size: 28px; }
+        .galeria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .galeria-item { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+        .galeria-item:hover { transform: translateY(-6px); box-shadow: 0 8px 18px rgba(0,0,0,0.15); }
+        .galeria-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .galeria-item-info { padding: 12px; text-align: center; }
+        .galeria-item-titulo { font-size: 15px; font-weight: 600; color: #4f6ef7; margin-bottom:6px; }
+        .galeria-item-desc { font-size: 13px; color:#666; }
+        /* Modal */
+        .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); }
+        .modal-content { margin:auto; display:block; max-width:90%; max-height:80vh; margin-top:4%; }
+        .modal-close { position:absolute; top:18px; right:28px; color:#fff; font-size:28px; cursor:pointer; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="logo">MiWeb</h2>
+        <ul>
+            <li><a href="INDEX.HTML">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Galería de Imágenes</h1>
+    </header>
+
+    <div class="galeria-container">
+        <h2 class="galeria-titulo">Imágenes del proyecto</h2>
+        <p style="text-align:center; color:#666;">Si quieres agregar la imagen adjunta, guarda el archivo en la carpeta <code>imagenes/</code> con el nombre <strong>Imagen9.jpg</strong> o <strong>virtualbox_shared.jpg</strong>, y recarga esta página (Ctrl+F5).</p>
+
+        <div class="galeria-grid">
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen1.jpg" alt="Imagen 1">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 1</div><div class="galeria-item-desc">Descripción 1</div></div>
+            </div>
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen2.png" alt="Imagen 2">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 2</div><div class="galeria-item-desc">Descripción 2</div></div>
+            </div>
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen3.png" alt="Imagen 3">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 3</div><div class="galeria-item-desc">Descripción 3</div></div>
+            </div>
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen4.jpg" alt="Imagen 4">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 4</div><div class="galeria-item-desc">Descripción 4</div></div>
+            </div>
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen5.jpg" alt="Imagen 5">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 5</div><div class="galeria-item-desc">Descripción 5</div></div>
+            </div>
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen6.jpg" alt="Imagen 6">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 6</div><div class="galeria-item-desc">Descripción 6</div></div>
+            </div>
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen7.jpg" alt="Imagen 7">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 7</div><div class="galeria-item-desc">Descripción 7</div></div>
+            </div>
+            <div class="galeria-item" onclick="abrirModal(this.querySelector('img'))">
+                <img src="imagenes/Imagen8.jpg" alt="Imagen 8">
+                <div class="galeria-item-info"><div class="galeria-item-titulo">Imagen 8</div><div class="galeria-item-desc">Descripción 8</div></div>
+            </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="cerrarModal()">&times;</span>
+        <img id="modal-img" class="modal-content" src="" alt="">
+    </div>
+
+    <footer style="text-align:center; padding:30px 20px; color:#666; background-color:#f5f5f5; margin-top:50px;">
+        <p>&copy; 2025 - Galería de Imágenes</p>
+    </footer>
+
+    <script>
+        function abrirModal(imgElement) {
+            var modal = document.getElementById('modal');
+            var modalImg = document.getElementById('modal-img');
+            modalImg.src = imgElement.src;
+            modal.style.display = 'block';
+        }
+        function cerrarModal() { document.getElementById('modal').style.display = 'none'; }
+        window.onclick = function(event) { var modal = document.getElementById('modal'); if (event.target == modal) modal.style.display = 'none'; }
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sistemas operativos</title>
+    <link rel="stylesheet" href="STYLE.CSS" />
+    <style>
+        .documento p, .documento li { text-align: justify; text-justify: inter-word; }
+        .documento { line-height: 1.7; color: #333; }
+        .documento ul { margin-left: 22px; }
+        .documento table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 15px; }
+        .documento thead th { background: #4f6ef7; color: #fff; padding: 12px; text-align: left; border: 1px solid #e6eefc; }
+        .documento tbody td { padding: 12px; border: 1px solid #e9eef6; vertical-align: top; }
+        .documento tbody tr:nth-child(even) { background: #fbfdff; }
+        .documento tbody tr:hover { background: #f4f9ff; }
+        @media print { .documento { box-shadow: none; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="logo">MiWeb</h2>
+        <ul>
+            <li><a href="INDEX.HTML">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>sistemas operativos</h1>
+    </header>
+
+    <section class="contenido">
+        <div class="documento" style="max-width:1000px; margin:30px auto; padding:40px; background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="display:flex; justify-content:flex-end; align-items:center; margin-bottom:20px;">
+                <div>
+                    <button id="printBtn" style="background:#4f6ef7; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer;">Descargar / Imprimir (PDF)</button>
+                </div>
+            </div>
+
+            <!-- Título secundario eliminado según petición -->
+
+            <h3>Ventajas en el Uso</h3>
+            <p>Las ventajas más significativas en el uso se centran en hacer la computación más accesible, intuitiva y versátil:</p>
+            <ul>
+                <li><strong>Abstracción de Hardware:</strong> El SO actúa como intermediario, permitiendo que los usuarios y las aplicaciones interactúen con el hardware mediante comandos sencillos y estándar, sin necesidad de conocer los detalles técnicos subyacentes. Esto simplificó la programación y la interacción.</li>
+                <li><strong>Interfaz Gráfica de Usuario (GUI):</strong> La evolución a interfaces gráficas (ventanas, iconos, menús y punteros) reemplazó las interfaces de línea de comandos, haciendo las computadoras intuitivas y accesibles para el público general.</li>
+                <li><strong>Multitarea y Concurrencia:</strong> Los SO modernos permiten ejecutar múltiples programas al mismo tiempo de manera eficiente, optimizando la productividad (por ejemplo, editar, navegar y reproducir multimedia simultáneamente).</li>
+            </ul>
+
+            <h3>Ventajas en la Economía</h3>
+            <p>El impacto económico de los SO se relaciona con la reducción de costos, la creación de mercados y la innovación:</p>
+            <ul>
+                <li><strong>Estandarización y Mercado de Software:</strong> Los SO proporcionan una plataforma estándar sobre la cual miles de desarrolladores crean software, impulsando la industria y creando competencia que beneficia al consumidor.</li>
+                <li><strong>Reducción de Costos de Hardware:</strong> Al gestionar los recursos eficientemente, los SO permiten aprovechar mejor el hardware, posibilitando el uso de equipos menos costosos o prolongando la vida útil de los existentes.</li>
+                <li><strong>Computación Personal y Móvil Masiva:</strong> La facilidad de uso introducida por los SO fue crucial para la adopción global de la tecnología, generando enormes economías digitales.</li>
+            </ul>
+
+            <h3>Ventajas en la Eficiencia</h3>
+            <p>Las mejoras en la eficiencia provienen de una mejor gestión de los recursos y una mayor seguridad:</p>
+            <ul>
+                <li><strong>Gestión de Recursos:</strong> Los SO asignan y desasignan recursos (CPU, memoria, almacenamiento) optimizando el rendimiento y evitando que un proceso monopolice la máquina.</li>
+                <li><strong>Seguridad y Aislamiento:</strong> Mecanismos como permisos, cifrado y aislamiento de procesos protegen datos y evitan que aplicaciones defectuosas comprometan el sistema.</li>
+                <li><strong>Conectividad en Red:</strong> La integración de capacidades de red en el SO facilita la comunicación, el comercio y el trabajo colaborativo modernos.</li>
+            </ul>
+
+            <h2 style="margin-top:30px; color:#1e1e2f;">¿Qué tipos de sistemas operativos existen actualmente?</h2>
+            <p>Los sistemas operativos se clasifican según el dispositivo donde operan, su gestión de tareas y administración de usuarios. A continuación una tabla con tipos y versiones representativas.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de SO</th>
+                        <th>Sistema Operativo (SO)</th>
+                        <th>Versiones Recientes/Populares</th>
+                        <th>Descripción Breve</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Escritorio</td>
+                        <td>Microsoft Windows</td>
+                        <td>Windows 11, Windows 10</td>
+                        <td>SO más popular en PCs, amplia compatibilidad de hardware y software.</td>
+                    </tr>
+                    <tr>
+                        <td>Escritorio</td>
+                        <td>macOS (Apple)</td>
+                        <td>macOS Sequoia (15), Sonoma (14), Ventura (13)</td>
+                        <td>Exclusivo para Macs; reconocido por su diseño, estabilidad y enfoque creativo.</td>
+                    </tr>
+                    <tr>
+                        <td>Escritorio</td>
+                        <td>GNU/Linux</td>
+                        <td>Ubuntu 24.04 LTS, Linux Mint, Fedora, Debian</td>
+                        <td>SO de código abierto disponible en muchas distribuciones para distintos usos.</td>
+                    </tr>
+                    <tr>
+                        <td>Escritorio</td>
+                        <td>ChromeOS (Google)</td>
+                        <td>Actualizaciones continuas</td>
+                        <td>SO ligero basado en la nube para Chromebooks.</td>
+                    </tr>
+                    <tr>
+                        <td>Móvil</td>
+                        <td>Android (Google)</td>
+                        <td>Android 15, 14, 13</td>
+                        <td>SO móvil más extendido; basado en núcleo Linux.</td>
+                    </tr>
+                    <tr>
+                        <td>Móvil</td>
+                        <td>iOS (Apple)</td>
+                        <td>iOS 18, 17</td>
+                        <td>SO exclusivo de Apple para iPhone/iPad; conocido por seguridad y fluidez.</td>
+                    </tr>
+                    <tr>
+                        <td>Móvil</td>
+                        <td>iPadOS (Apple)</td>
+                        <td>iPadOS 18, 17</td>
+                        <td>Variante de iOS optimizada para tabletas.</td>
+                    </tr>
+                    <tr>
+                        <td>Otros</td>
+                        <td>Windows Server</td>
+                        <td>Windows Server 2022, 2019</td>
+                        <td>Diseñado para entornos empresariales y servidores.</td>
+                    </tr>
+                    <tr>
+                        <td>Otros</td>
+                        <td>RTOS (Sistemas en Tiempo Real)</td>
+                        <td>VxWorks, FreeRTOS, QNX</td>
+                        <td>Usados en sistemas críticos que requieren tiempos de respuesta estrictos.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 style="margin-top:30px; color:#1e1e2f;">Clasificación por Funcionalidad</h2>
+            <p>Clasificación enfocada en cómo el SO gestiona tareas y usuarios:</p>
+            <h3>A. Según la Administración de Tareas</h3>
+            <ul>
+                <li><strong>Multitarea:</strong> Permite ejecutar varios procesos concurrentes (ej. Windows, macOS, Linux, Android, iOS).</li>
+                <li><strong>Monotarea:</strong> Solo ejecuta un proceso a la vez (histórico: MS-DOS).</li>
+            </ul>
+
+            <h3>B. Según la Administración de Usuarios</h3>
+            <ul>
+                <li><strong>Multiusuario:</strong> Permite varios usuarios simultáneos (ej. Windows Server, Linux).</li>
+                <li><strong>Monousuario:</strong> Un único usuario a la vez (ej. primeras versiones de Windows/MS-DOS).</li>
+            </ul>
+
+            <h3>C. Sistemas Embebidos y en Tiempo Real</h3>
+            <ul>
+                <li><strong>Sistemas Embebidos:</strong> Diseñados para dispositivos con recursos limitados (IoT, routers, electrodomésticos).</li>
+                <li><strong>RTOS:</strong> Garantizan respuestas en plazos fijos; usados en robótica, automoción y medicina.</li>
+            </ul>
+
+            <div class="resumen" style="margin-top:20px;">
+                <h3>Observación</h3>
+                <p>Esta clasificación y ejemplos permiten comprender la diversidad de sistemas operativos actuales y sus aplicaciones según el contexto: doméstico, empresarial, móvil o especializado.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center; padding:20px; color:#666; background-color:#f5f5f5; margin-top:30px;">
+        <p>&copy; 2025 - Documento sobre Sistemas Operativos</p>
+    </footer>
+
+    <script>
+        document.getElementById('printBtn').addEventListener('click', function(){
+            window.print();
+        });
+    </script>
+</body>
+</html>
