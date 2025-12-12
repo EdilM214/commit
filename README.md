@@ -1,2 +1,0 @@
-# commit
-Reporte III Trimestre
